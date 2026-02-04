@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - ChinoEffy</title>
+  <meta name="description" content="Review your cart and proceed to checkout for ChinoEffy virtual products.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">CE</div>
+        ChinoEffy
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">
+            Product Categories
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="chinese-learning.html" class="dropdown-item">Chinese Learning</a>
+            <a href="productivity-tools.html" class="dropdown-item">Productivity Tools</a>
+          </div>
+        </li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+      
+      <button class="cart-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" style="display: none;">0</span>
+      </button>
+      
+      <button class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart Page -->
+  <section class="cart-page">
+    <div class="container">
+      <h1 class="cart-page-title">Shopping Cart</h1>
+      
+      <div class="cart-page-grid">
+        <!-- Cart Items -->
+        <div class="cart-page-items">
+          <div class="cart-page-header">
+            <span>Product</span>
+            <span>Price</span>
+            <span>Quantity</span>
+            <span>Subtotal</span>
+          </div>
+          
+          <!-- Sample Cart Items (will be populated by JS) -->
+          <div id="cart-items-container">
+            <div class="cart-page-item" data-id="1">
+              <div class="cart-page-product">
+                <img src="img/product-chinese-slang.jpg" alt="Complete Chinese Internet Slang">
+                <div>
+                  <h4>Complete Chinese Internet Slang</h4>
+                  <a href="#" class="remove-item" style="font-size: 12px; color: #888;">Remove</a>
+                </div>
+              </div>
+              <div class="cart-page-price">$12.99</div>
+              <div class="cart-page-quantity">
+                <button class="quantity-btn minus">-</button>
+                <span>1</span>
+                <button class="quantity-btn plus">+</button>
+              </div>
+              <div class="cart-page-subtotal">$12.99</div>
+            </div>
+            
+            <div class="cart-page-item" data-id="4">
+              <div class="cart-page-product">
+                <img src="img/product-annual-planner.jpg" alt="Annual Planner Template">
+                <div>
+                  <h4>Annual Planner Template</h4>
+                  <a href="#" class="remove-item" style="font-size: 12px; color: #888;">Remove</a>
+                </div>
+              </div>
+              <div class="cart-page-price">$8.99</div>
+              <div class="cart-page-quantity">
+                <button class="quantity-btn minus">-</button>
+                <span>1</span>
+                <button class="quantity-btn plus">+</button>
+              </div>
+              <div class="cart-page-subtotal">$8.99</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+          <h3>Order Summary</h3>
+          
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$21.98</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span>Free</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax</span>
+            <span>$0.00</span>
+          </div>
+          
+          <div class="summary-total">
+            <span>Total</span>
+            <span>$21.98</span>
+          </div>
+          
+          <a href="checkout.html" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+          
+          <div class="payment-methods">
+            <p>We accept:</p>
+            <div class="payment-icons-large">
+              <div class="payment-icon-large">PayPal</div>
+              <div class="payment-icon-large">Stripe</div>
+              <div class="payment-icon-large">Visa</div>
+              <div class="payment-icon-large">MC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">CE</div>
+            ChinoEffy
+          </a>
+          <p>Learn Smarter. Work Better.<br>Your one-stop shop for Chinese learning materials and productivity tools.</p>
+        </div>
+        
+        <div class="footer-nav">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chinese-learning.html">Chinese Learning</a></li>
+            <li><a href="productivity-tools.html">Productivity Tools</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4 class="footer-title">Contact Us</h4>
+          <p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            WhatsApp: +86 placeholder
+          </p>
+          <p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            support@chinoeffy.com
+          </p>
+          <div class="qr-placeholder">QR Code<br>Placeholder</div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 ChinoEffy. All rights reserved. | Website: www.chinoeffy.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
